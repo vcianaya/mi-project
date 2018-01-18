@@ -10,7 +10,7 @@ var adapter = function (device) {
     return new adapter(device);
   }
 
-  this.format = {'start': '(', 'end': ')', 'separator': ''};
+  this.format = { 'start': '(', 'end': ')', 'separator': '' };
   this.device = device;
   this.__count = 1;
 
@@ -77,11 +77,11 @@ var adapter = function (device) {
     var str = length + protocal_id + serial;
 
     this.__count++;
-    console.log("AQUI EL DECODIFICADO");
+    console.log("AQUI EL codigo---->" + str);
 
-    console.log(str);
     var str = new Buffer(str, 'hex');
-    
+    console.log("Aqui el codigo codificado----->" + str);
+
     // var crc = require('/usr/lib/node_modules/crc/lib/index.js');
     var crc = require('../../../crc16-ccitt-node');
     var crcResult = f.str_pad(crc.getCrc16(str).toString(16), 4, '0');
