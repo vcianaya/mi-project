@@ -77,7 +77,7 @@ var adapter = function (device) {
     var str = length + protocal_id + serial;
 
     this.__count++;
-    console.log(str);
+    var str = new Buffer(str, 'hex');
     
     // var crc = require('/usr/lib/node_modules/crc/lib/index.js');
     var crc = require('../../../crc16-ccitt-node');
