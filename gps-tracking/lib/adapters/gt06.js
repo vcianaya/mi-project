@@ -85,7 +85,7 @@ var adapter = function (device) {
     // var crc = require('/usr/lib/node_modules/crc/lib/index.js');
     var crc = require('../../../crc16-ccitt-node');
     var crcResult = f.str_pad(crc.getCrc16(str).toString(16), 4, '0');
-    console.log("Aqui el codigo codificado----->" + crcResult);
+    console.log("Aqui el codigo crcResult----->" + crcResult);
     var buff = new Buffer('7878' + str + crcResult + '0d0a', 'hex');
     var buff = new Buffer('787805010001d9dc0d0a', 'hex');
     //发送原始数据
