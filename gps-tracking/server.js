@@ -19,4 +19,9 @@ var server = gps.server(options, function (device, connection) {
         console.log(data);
         return data;
     });
+
+    connection.on('error', function (data) {
+        console.log("Connection Error: ");
+        console.log(data);       
+    });
 });
