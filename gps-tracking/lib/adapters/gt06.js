@@ -166,9 +166,7 @@ var adapter = function (device) {
      data['charge_status'] = data['device_info'][5];
      data['acc_status']= data['device_info'][6];
      data['defence_status'] = data['device_info'][7];
-     */
-
-    console.log(data);
+     */    
 
     res = {
       latitude: data.latitude,
