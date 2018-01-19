@@ -16,7 +16,13 @@ var server = gps.server(options, function (device, connection) {
     //PING -> When the gps sends their position  
     device.on("ping", function (data) {
         //After the ping is received, but before the data
-        console.log(data.device_id);
+        coordenadas_gps = {
+            'device_id' : device.uid,
+            'latitude': data.latitude,
+            'longitude':  data.longitude,
+            'speed': data.speed
+        };
+        console.log(coordenadas_gps);
         return data;
     });
 
