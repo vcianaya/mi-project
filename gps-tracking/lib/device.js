@@ -117,7 +117,7 @@ function Device(adapter, connection, gpsServer) {
      Optionals:
      orientation, speed, mileage, etc */
 
-    _this.do_log('Position received ( ' + gpsData.latitude + ',' + gpsData.longitude + ' )');
+    // _this.do_log('Position received ( ' + gpsData.latitude + ',' + gpsData.longitude + ' )');
     gpsData.from_cmd = msgParts.cmd;
     _this.emit('ping', gpsData, msgParts);
 
